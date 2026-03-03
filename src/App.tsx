@@ -5,9 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { CursorGlow } from "@/components/CursorGlow";
 import Index from "./pages/Index";
 import BookDemo from "./pages/BookDemo";
-import { ServicesPage, IndustriesPage, CaseStudiesPage, PricingPage, AboutPage, ContactPage } from "./pages/SecondaryPages";
+import { ServicesPage, IndustriesPage, CaseStudiesPage, PricingPage, AboutPage } from "./pages/SecondaryPages";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <CursorGlow />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
@@ -34,7 +36,6 @@ const App = () => (
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
           <Route path="/book-demo" element={<BookDemo />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

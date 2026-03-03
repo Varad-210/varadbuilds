@@ -3,26 +3,23 @@ import { Link } from "react-router-dom";
 
 export const FinalCTA = () => {
   return (
-    <section className="section-padding bg-card border-t border-border">
+    <section className="section-padding bg-muted/20 py-20">
       <div className="max-w-4xl mx-auto text-center">
         <AnimatedSection>
-          <h2 className="heading-xl text-foreground mb-8">
-            Ready to Stop{" "}
-            <span className="italic">Losing</span> Customers?
-          </h2>
-          <p className="body-lg text-muted-foreground max-w-xl mx-auto mb-12">
-            See your AI receptionist in action. Book a free 15-minute demo and 
-            hear the difference.
-          </p>
-          <Link
-            to="/book-demo"
-            className="inline-block px-12 py-5 text-lg font-medium bg-foreground text-background rounded-sm hover:bg-accent transition-all duration-300 hover:scale-[1.02]"
-          >
-            Book a Live Demo
-          </Link>
-          <p className="mt-6 text-sm text-muted-foreground">
-            No commitment. No credit card. Just a conversation.
-          </p>
+          <div className="border-2 border-accent rounded-sm p-12 bg-accent/5 glow-accent">
+            <h2 className="heading-lg text-foreground mb-4">
+              Ready to Stop Losing Customers?
+            </h2>
+            <p className="body-lg text-muted-foreground mb-8">
+              See the system working on your business. Free demo, no commitment.
+            </p>
+            <Link
+              to="/book-demo"
+              className="inline-block px-12 py-4 text-lg font-medium bg-foreground text-background rounded-sm hover:bg-accent transition-all duration-300 hover:scale-105 glow-soft"
+            >
+              Book Free Demo
+            </Link>
+          </div>
         </AnimatedSection>
       </div>
     </section>

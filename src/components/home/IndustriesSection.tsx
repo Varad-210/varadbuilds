@@ -1,35 +1,38 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { Building2, UtensilsCrossed, Stethoscope, Home, Scissors } from "lucide-react";
 
 const industries = [
-  { icon: Building2, name: "Hotels", description: "Room bookings, check-in inquiries, concierge services" },
-  { icon: UtensilsCrossed, name: "Restaurants", description: "Table reservations, menu questions, event bookings" },
-  { icon: Stethoscope, name: "Clinics", description: "Appointment scheduling, prescription refills, lab results" },
-  { icon: Home, name: "Real Estate", description: "Property inquiries, site visit bookings, follow-ups" },
-  { icon: Scissors, name: "Salons", description: "Appointment bookings, service details, availability checks" },
+  { icon: "💇", title: "Salons & Spas", description: "Never miss bookings" },
+  { icon: "🏥", title: "Clinics", description: "Auto appointments" },
+  { icon: "🍽️", title: "Restaurants", description: "Instant table bookings" },
+  { icon: "📚", title: "Coaching", description: "Convert enquiries" },
+  { icon: "🏢", title: "Real Estate", description: "24/7 lead capture" },
+  { icon: "💪", title: "Gyms", description: "Auto memberships" }
 ];
 
 export const IndustriesSection = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-muted/20 py-16">
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
-          <p className="text-sm tracking-[0.3em] uppercase text-silver-muted mb-4 font-body text-center">
-            Industries We Serve
-          </p>
-          <h2 className="heading-lg text-foreground text-center mb-6">
-            Built for <span className="italic">Your</span> Business
-          </h2>
-          <div className="gradient-line max-w-32 mx-auto mb-16" />
+          <div className="text-center mb-12">
+            <h2 className="heading-lg text-foreground mb-2">
+              Built for{" "}
+              <span className="italic text-accent">Real Businesses</span>
+            </h2>
+          </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {industries.map((industry, index) => (
-            <AnimatedSection key={index} delay={index * 0.1}>
-              <div className="border border-border rounded-sm p-8 text-center group hover:border-accent hover:glow-soft transition-all duration-500">
-                <industry.icon className="w-8 h-8 text-silver-muted mx-auto mb-4 group-hover:text-foreground transition-colors duration-500" />
-                <h3 className="font-heading text-lg font-medium text-foreground mb-2">{industry.name}</h3>
-                <p className="text-sm text-muted-foreground">{industry.description}</p>
+            <AnimatedSection key={index} delay={index * 0.05}>
+              <div className="border border-border rounded-sm p-4 bg-background hover:border-accent transition-all glow-soft h-full text-center">
+                <div className="text-3xl mb-2">{industry.icon}</div>
+                <h3 className="text-sm font-semibold text-foreground mb-1">
+                  {industry.title}
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  {industry.description}
+                </p>
               </div>
             </AnimatedSection>
           ))}
