@@ -8,7 +8,7 @@ export const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/logo.png" 
+                src="https://res.cloudinary.com/dclr2ihxn/image/upload/v1787073847/logo2_gdparh.png" 
                 alt="VaradBuilds Logo" 
                 className="w-10 h-10 object-contain"
               />

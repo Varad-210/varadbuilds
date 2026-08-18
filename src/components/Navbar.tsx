@@ -38,7 +38,7 @@ export const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3 group">
             <img 
-              src="src\assets\logo.png" 
+              src="https://res.cloudinary.com/dclr2ihxn/image/upload/v1787073847/logo2_gdparh.png" 
               alt="VaradBuilds Logo" 
               className="w-10 h-10 md:w-12 md:h-12 object-contain transition-transform duration-300 group-hover:scale-110"
             />
