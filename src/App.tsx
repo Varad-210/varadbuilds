@@ -6,9 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { CursorGlow } from "@/components/CursorGlow";
+import { WhatsAppWidget } from "@/components/WhatsAppWidget";
 import Index from "./pages/Index";
 import BookDemo from "./pages/BookDemo";
-import { ServicesPage, IndustriesPage, CaseStudiesPage, PricingPage, AboutPage } from "./pages/SecondaryPages";
+import { AboutPage } from "./pages/AboutPage";
+import { PricingPage } from "./pages/PricingPage";
+import { ServicesPage } from "./pages/ServicesPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,12 +31,11 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <CursorGlow />
+        <WhatsAppWidget />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/industries" element={<IndustriesPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/book-demo" element={<BookDemo />} />

@@ -25,7 +25,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-body text-sm font-semibold tracking-widest uppercase text-silver-muted mb-6">Navigate</h4>
             <div className="flex flex-col gap-3">
-              {["Services", "Pricing", "About"].map((item) => (
+              {["Home","Services", "Pricing", "About"].map((item) => (
                 <Link
                   key={item}
                   to={`/${item.toLowerCase().replace(" ", "-")}`}
@@ -43,10 +43,7 @@ export const Footer = () => {
               <Link to="/book-demo" className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm">
                 Book a Demo
               </Link>
-              <a href="tel:+919049671938" className="text-muted-foreground hover:text-accent transition-colors duration-300 text-sm">
-                📞 +91 90496 71938
-              </a>
-              <a href="mailto:sontakkevarad@gmail.com" className="text-muted-foreground hover:text-accent transition-colors duration-300 text-sm">
+              <a href="mailto:sontakkevarad210@gmail.com" className="text-muted-foreground hover:text-accent transition-colors duration-300 text-sm">
                 ✉️ sontakkevarad@gmail.com
               </a>
               <a href="https://wa.me/919049671938" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors duration-300 text-sm">
