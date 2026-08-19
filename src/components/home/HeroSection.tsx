@@ -10,10 +10,10 @@ export const HeroSection = () => {
       <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,hsl(var(--primary))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary))_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_110%)] opacity-[0.03]" />
 
       <div className="container relative z-10 mx-auto px-4 pt-32 pb-24 h-full flex flex-col justify-center">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-5 items-center">
           
           {/* Left Content */}
-          <div className="text-left space-y-8 z-20">
+          <div className="text-left space-y-2 z-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="flex flex-col space-y-6"
+              className="flex flex-col space-y-2"
             >
               <p className="text-sm tracking-[0.3em] uppercase text-primary font-semibold mb-6 font-body">
                 DIGITAL SYSTEMS FOR GROWING BUSINESSES

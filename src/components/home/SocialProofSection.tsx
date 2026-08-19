@@ -68,15 +68,9 @@ export const SocialProofSection = () => {
                 {errors[idx] ? (
                   /* Fallback if image not found */
                   <div className="w-full h-64 rounded-2xl border-2 border-dashed border-primary/30 bg-primary/5 flex flex-col items-center justify-center gap-3 p-8">
-                    <p className="text-muted-foreground font-semibold text-center">
-                      📁 Image not found
-                    </p>
-                    <p className="text-sm text-muted-foreground text-center">
-                      Save your screenshot as <code className="bg-muted px-2 py-0.5 rounded font-mono text-xs">proof{idx + 1}.png</code> inside the <code className="bg-muted px-2 py-0.5 rounded font-mono text-xs">public/</code> folder
-                    </p>
-                    <p className="text-xs text-primary font-medium">
-                      📂 d:\Bizgurukul\Business_website\varadbuilds original\public\proof{idx + 1}.png
-                    </p>
+                  
+                    <img src="https://res.cloudinary.com/dclr2ihxn/image/upload/v1787112532/ChatGPT_Image_Aug_19_2026_09_37_06_AM_pcq7qi.png" alt="" />
+                  
                   </div>
                 ) : (
                   <div

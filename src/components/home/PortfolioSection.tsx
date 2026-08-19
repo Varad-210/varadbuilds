@@ -7,8 +7,8 @@ const caseStudies = [
     tagIcon: <Globe className="w-3 h-3" />,
     industry: "Jewellery / E-commerce",
     client: "Ambilwade Premium Jewellery",
-    screenshot1: "https://res.cloudinary.com/dclr2ihxn/image/upload/v1787058487/129C101D-F984-42CD-81E2-382B649977B5_qll0ll.png",
-    screenshot2: "https://res.cloudinary.com/dclr2ihxn/image/upload/v1787058496/C5D9CBCE-318A-4220-879D-963592543F97_kiu7tv.png",
+    screenshot2: "https://res.cloudinary.com/dclr2ihxn/image/upload/v1787113719/ChatGPT_Image_Aug_19_2026_09_58_19_AM_o2krco.png",
+    screenshot1: "https://res.cloudinary.com/dclr2ihxn/image/upload/v1787113446/ChatGPT_Image_Aug_19_2026_09_53_11_AM_guwy0s.png",
     challenge: "Create a premium digital shopping experience that builds trust and makes it easy for customers to discover jewellery, manage purchases, and book store appointments.",
     built: "A modern jewellery e-commerce platform featuring product discovery, wishlist, cart, customer accounts, order tracking, appointments, saved addresses, and custom jewellery experiences.",
     objective: "Create a seamless online-to-store customer journey while presenting the jewellery brand with a premium digital identity.",
@@ -49,6 +49,13 @@ export const PortfolioSection = () => {
                         e.currentTarget.parentElement!.innerHTML = `<div class="w-full h-[280px] flex items-center justify-center bg-muted/30 text-muted-foreground text-sm font-medium p-4 text-center">Save screenshot as<br/>public/proof1.png</div>`;
                       }}
                     />
+                    {/* Service tag */}
+                    <div className="absolute top-4 left-4">
+                      <span className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider py-1.5 px-3 rounded-full shadow-lg">
+                        {tagIcon(cs.tag)}
+                        {cs.tag}
+                      </span>
+                    </div>
                   </div>
                   <div className="overflow-hidden bg-muted/20 relative">
                     <img
@@ -60,13 +67,6 @@ export const PortfolioSection = () => {
                         e.currentTarget.parentElement!.innerHTML = `<div class="w-full h-[280px] flex items-center justify-center bg-muted/30 text-muted-foreground text-sm font-medium p-4 text-center">Save screenshot as<br/>public/proof2.png</div>`;
                       }}
                     />
-                    {/* Service tag */}
-                    <div className="absolute top-4 left-4">
-                      <span className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider py-1.5 px-3 rounded-full shadow-lg">
-                        {tagIcon(cs.tag)}
-                        {cs.tag}
-                      </span>
-                    </div>
                   </div>
                 </div>
 

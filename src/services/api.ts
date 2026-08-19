@@ -9,7 +9,6 @@ export interface BookingData {
   preferredDate: Date;
   preferredTime: string;
   city: string;
-  monthlyCalls?: string;
   message?: string;
   source?: 'website' | 'phone' | 'whatsapp' | 'ai-agent';
 }
@@ -20,7 +19,6 @@ export interface ContactData {
   email?: string;
   businessType: 'cafe' | 'restaurant' | 'salon' | 'clinic' | 'hotel' | 'realestate' | 'other';
   city: string;
-  monthlyCalls?: string;
   message?: string;
 }
 

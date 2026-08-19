@@ -47,7 +47,7 @@ export const WhatsAppWidget = () => {
             href="https://wa.me/919049671938?text=Hi%20Varad,%20I'm%20interested%20in%20discussing%20a%20digital%20growth%20project."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_8px_20px_rgba(37,211,102,0.3)] hover:scale-110 hover:shadow-[0_8px_25px_rgba(37,211,102,0.4)] transition-all duration-300"
+            className="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-[0_8px_20px_rgba(37,211,102,0.3)] hover:scale-110 hover:shadow-[0_8px_25px_rgba(37,211,102,0.4)] transition-all duration-300"
             aria-label="Chat on WhatsApp"
           >
             <MessageCircle className="w-8 h-8 fill-current" />

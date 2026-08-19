@@ -197,7 +197,7 @@ export const ServicesPage = () => {
                   {/* Screenshot placeholder */}
                   <div className="rounded-2xl overflow-hidden border border-border/50 shadow-lg bg-muted/20 h-64 flex items-center justify-center relative">
                     <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent" />
-                    <p className="text-muted-foreground text-sm font-bold tracking-widest relative z-10">[ADD REAL WEBSITE SCREENSHOT]</p>
+                    <img src="https://res.cloudinary.com/dclr2ihxn/image/upload/v1787112532/ChatGPT_Image_Aug_19_2026_09_37_06_AM_pcq7qi.png" alt="" />
                   </div>
                 </div>
               </AnimatedSection>
