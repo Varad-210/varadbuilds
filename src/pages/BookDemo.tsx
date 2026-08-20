@@ -40,7 +40,7 @@ export const BookDemo = () => {
     setIsLoading(true);
 
     try {
-      const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const baseUrl = import.meta.env.VITE_API_URL || "https://varadbuilds-api.onrender.com";
       const API_URL = `${baseUrl.replace(/\/$/, "")}/api/bookings`;
 
       /*
