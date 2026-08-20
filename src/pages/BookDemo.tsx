@@ -40,14 +40,8 @@ export const BookDemo = () => {
     setIsLoading(true);
 
     try {
-      /*
-       * IMPORTANT:
-       * Change this URL only if your backend runs on another port.
-       *
-       * Example:
-       * http://localhost:5000/api/bookings
-       */
-      const API_URL = `${import.meta.env.VITE_API_URL}/api/bookings`;
+      const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const API_URL = `${baseUrl.replace(/\/$/, "")}/api/bookings`;
 
       /*
        * Convert frontend field names to the exact
