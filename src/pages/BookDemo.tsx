@@ -115,6 +115,39 @@ export const BookDemo = () => {
       }
 
       /*
+       * Send email notification via Web3Forms.
+       * This runs after a successful DB save so it won't
+       * block the booking from being recorded.
+       */
+      try {
+        const web3Data = new FormData();
+        web3Data.append("access_key", "d91f0415-8450-4f29-8a1d-f0257b01ba83");
+        web3Data.append("name", formData.name);
+        web3Data.append("email", formData.email || "Not provided");
+        web3Data.append("phone", formData.phone);
+        web3Data.append("businessName", formData.businessName);
+        web3Data.append("service", formData.service);
+        web3Data.append("city", formData.city || "Not provided");
+        web3Data.append("budget", formData.budget || "Not provided");
+        web3Data.append("problem", formData.problem || "Not provided");
+        web3Data.append("subject", `New Strategy Call Booking from ${formData.name}`);
+
+        const emailRes = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: web3Data,
+        });
+
+        const emailData = await emailRes.json();
+        if (emailRes.ok) {
+          console.log("📧 Email sent via Web3Forms");
+        } else {
+          console.warn("⚠️ Web3Forms email failed:", emailData.message);
+        }
+      } catch (emailError) {
+        console.warn("⚠️ Web3Forms request failed:", emailError);
+      }
+
+      /*
        * Only show success AFTER the backend confirms
        * that PostgreSQL successfully created the booking.
        */
@@ -135,6 +168,7 @@ export const BookDemo = () => {
       setIsLoading(false);
     }
   };
+
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
