@@ -34,20 +34,16 @@ export const HeroSection = () => {
                 DIGITAL SYSTEMS FOR GROWING BUSINESSES
               </p>
               
-              {/* H1 with primary keyword */}
+              {/* H1 with primary keyword — trustworthy, benefit-first */}
               <h1 className="heading-xl text-foreground mb-4">
-                Top Web Development<br />
-                <span className="italic text-primary">Company in Pune.</span>
+                Web Development &amp; Digital Solutions<br />
+                <span className="italic text-primary">for Growing Businesses in Pune.</span>
               </h1>
               
               {/* SEO body copy — geo-targeted intro */}
               <p className="body-lg text-muted-foreground mb-2 max-w-2xl text-lg md:text-xl font-medium leading-relaxed">
                 VaradBuilds is a Pune-based digital agency helping businesses across Maharashtra build high-converting websites, automate operations with custom software, and attract qualified leads through Meta Ads.
               </p>
-              <p className="text-base text-muted-foreground mb-6 max-w-2xl font-medium leading-relaxed">
-                Whether you run a café in Koregaon Park, a clinic in Kothrud, a salon in Baner, or a startup in Hinjewadi — we understand the Pune market and build digital systems that fit the way your business actually works.
-              </p>
-
               <div className="flex flex-col gap-3">
                 <div className="flex flex-col sm:flex-row gap-6 mt-2">
                   <Link

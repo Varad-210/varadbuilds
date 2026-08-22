@@ -14,12 +14,12 @@ export const Footer = () => {
               />
               <h3 className="font-heading text-2xl font-semibold text-foreground">VaradBuilds</h3>
             </div>
-            <p className="body-md text-muted-foreground max-w-md mb-4">
-              Smart Automation for Growing Businesses
-            </p>
             <p className="text-sm text-muted-foreground">
-              Helping Indian businesses capture every customer, every day.
+              <b> DIGITAL SYSTEMS FOR GROWING BUSINESSES </b>
             </p>
+            <p className="text-base text-muted-foreground mb-6 max-w-2xl font-medium leading-relaxed">
+                Whether you run a café in Koregaon Park, a clinic in Kothrud, a salon in Baner, or a startup in Hinjewadi — we understand the Pune market and build digital systems that fit the way your business actually works.
+              </p>
           </div>
 
           <div>

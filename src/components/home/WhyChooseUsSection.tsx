@@ -38,9 +38,9 @@ export const WhyChooseUsSection = () => {
           <div className="text-center mb-10">
             {/* H2 with Pune keyword */}
             <h2 className="heading-lg text-foreground mb-4">
-              Why Choose a Pune-Based{" "}
+              Why Work With a{" "}
               <br className="md:hidden" />
-              <span className="italic text-primary">Web Development Agency?</span>
+              <span className="italic text-primary">Pune-Based Web Development Studio?</span>
             </h2>
 
             {/* Geo-targeted body copy */}

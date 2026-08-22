@@ -100,9 +100,7 @@ export const AboutPage = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[600px] flex items-center justify-center bg-muted">
                 {/* Placeholder for professional founder photo */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-gray-200 to-gray-100 flex flex-col items-center justify-center p-8 text-center border-2 border-dashed border-gray-300">
-                  <span className="text-gray-400 font-bold text-xl mb-2">Professional Founder Photo Here</span>
-                  <span className="text-gray-400 text-sm">Natural • Approachable • Clean background</span>
-                  <p className="text-xs text-gray-400 mt-4">(Replace this div with actual img tag when image is available)</p>
+                  <img src="https://res.cloudinary.com/dclr2ihxn/image/upload/v1787379821/ChatGPT_Image_Jun_3_2026_12_12_30_AM_xcavpb.png" alt="" />
                 </div>
               </div>
             </AnimatedSection>
