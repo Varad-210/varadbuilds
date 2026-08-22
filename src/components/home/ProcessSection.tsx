@@ -8,31 +8,31 @@ export const ProcessSection = () => {
       num: "01",
       title: "Discovery",
       subtitle: "We understand the business first.",
-      desc: "We discuss your goals, current process, customers, existing tools, and biggest bottlenecks."
+      desc: "We discuss your goals, current process, customers, existing tools, and biggest bottlenecks. No assumptions — just clear questions."
     },
     {
       num: "02",
       title: "Strategy",
       subtitle: "We recommend what actually makes sense.",
-      desc: "You don't need to buy every service. We identify the highest-impact solution for your current stage."
+      desc: "You don't need to buy every service. We identify the highest-impact solution for your current stage and give you a clear plan."
     },
     {
       num: "03",
       title: "Build",
       subtitle: "We design and develop the solution.",
-      desc: "From website and software development to campaign setup, we turn the strategy into a working system."
+      desc: "From website and software development to campaign setup, we turn the strategy into a working system — typically 3–8 weeks depending on scope."
     },
     {
       num: "04",
       title: "Launch",
       subtitle: "We test before putting it in front of customers.",
-      desc: "We check responsiveness, forms, tracking, performance, integrations, and key user journeys."
+      desc: "We check responsiveness, forms, tracking, performance, integrations, and key user journeys before going live."
     },
     {
       num: "05",
       title: "Improve",
       subtitle: "We use feedback and data to keep improving.",
-      desc: "For ongoing services, performance and customer behavior guide future improvements."
+      desc: "For ongoing services, performance and customer behavior guide future improvements — so the system compounds value over time."
     }
   ];
 
@@ -40,10 +40,25 @@ export const ProcessSection = () => {
     <section className="section-padding bg-gradient-to-b from-blue-50/50 to-white py-24 relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10">
         <AnimatedSection>
-          <h2 className="heading-lg text-foreground text-center mb-16">
-            From business problem to <br className="hidden md:block"/>
-            <span className="italic text-primary">working solution.</span>
+          {/* H2 for Process section */}
+          <h2 className="heading-lg text-foreground text-center mb-4">
+            Our Web Development Process:{" "}
+            <br className="hidden md:block" />
+            <span className="italic text-primary">From Brief to Launch.</span>
           </h2>
+          <p className="text-center text-muted-foreground font-medium text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
+            Most Pune businesses ask: "How long will this take?" For a standard website, expect 3–5 weeks. For custom software or a larger platform, 6–12 weeks. We give you a realistic timeline upfront — no surprises.
+            {" "}Good web development follows{" "}
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn_web_development"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
+            >
+              established web standards
+            </a>
+            {" "}at every step.
+          </p>
         </AnimatedSection>
 
         <div className="space-y-6 mb-16">

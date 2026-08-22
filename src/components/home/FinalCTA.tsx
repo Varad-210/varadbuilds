@@ -1,6 +1,6 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, IndianRupee } from "lucide-react";
 
 export const FinalCTA = () => {
   return (
@@ -15,7 +15,7 @@ export const FinalCTA = () => {
             Your next digital upgrade starts with one conversation.
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-10 max-w-3xl mx-auto font-medium leading-relaxed">
-            Whether you need a website that converts, software that removes manual work, or Meta Ads that bring qualified prospects to your business, let's start by understanding what you're trying to achieve.
+            Whether you're a business owner in Pune looking for a website that converts, software that removes manual work, or Meta Ads that bring qualified prospects — let's start by understanding what you're trying to achieve.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
             <Link
@@ -35,6 +35,14 @@ export const FinalCTA = () => {
               <MessageCircle className="mr-2 w-5 h-5" />
               WhatsApp Us
             </a>
+
+            <Link
+              to="/pricing"
+              className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold border-2 border-white/60 text-white/90 rounded-xl hover:bg-white/10 hover:border-white transition-all duration-300"
+            >
+              <IndianRupee className="mr-2 w-5 h-5" />
+              View Pricing
+            </Link>
           </div>
           <p className="text-primary-foreground/70 text-sm font-medium">
             No complicated jargon. No pressure. Just a conversation about your business.

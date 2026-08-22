@@ -8,7 +8,7 @@ export const SolutionSection = () => {
       icon: <Globe className="w-10 h-10 text-primary" />,
       tag: "Web Development",
       headline: "Turn Your Website Into Your Best Sales Asset.",
-      copy: "Build trust before the first conversation with a fast, mobile-first website designed to explain your offer clearly and turn visitors into inquiries.",
+      copy: "From informational business sites to full e-commerce stores and web applications, we design and build websites that load fast, look great on mobile, and guide visitors toward taking action — whether that's calling you, filling a form, or placing an order.",
       benefits: [
         "Stronger online credibility",
         "Clearer customer journey",
@@ -25,7 +25,7 @@ export const SolutionSection = () => {
       icon: <Code2 className="w-10 h-10 text-primary" />,
       tag: "Custom Software Development",
       headline: "Replace Manual Work With Software Built for Your Business.",
-      copy: "If your team is stuck with spreadsheets, repetitive data entry, disconnected tools, or manual processes, we build custom web applications around the way your business actually works.",
+      copy: "If your team is stuck with spreadsheets, repetitive data entry, disconnected tools, or manual processes, we build custom web applications around the way your business actually works. From CRMs to client portals, we replace friction with automation.",
       benefits: [
         "Custom CRM and lead systems",
         "Internal dashboards",
@@ -42,7 +42,7 @@ export const SolutionSection = () => {
       icon: <Target className="w-10 h-10 text-primary" />,
       tag: "Meta Ads",
       headline: "Turn Meta Ads Into a Lead Generation System.",
-      copy: "Reach the right audience with Facebook and Instagram campaigns built around your offer, creative, landing page, tracking, and conversion journey.",
+      copy: "Reach the right audience with Facebook and Instagram campaigns built around your offer, creative, landing page, tracking, and conversion journey. We handle strategy through to reporting so you can focus on closing leads.",
       benefits: [
         "Audience research",
         "Campaign strategy",
@@ -65,13 +65,27 @@ export const SolutionSection = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <AnimatedSection>
           <div className="text-center mb-20">
+            {/* H2 for Services section */}
             <h2 className="heading-lg text-foreground mb-6">
-              One partner for the digital systems<br />
-              <span className="italic text-primary">behind your growth.</span>
+              Our Web Development &amp; Digital{" "}
+              <span className="italic text-primary">Services in Pune.</span>
             </h2>
-            <div className="body-lg text-muted-foreground max-w-2xl mx-auto font-medium space-y-2">
-              <p>We don't just build software or run ads.</p>
-              <p>We understand the business problem first, then build the right digital solution around it.</p>
+            <div className="body-lg text-muted-foreground max-w-3xl mx-auto font-medium space-y-3">
+              <p>
+                We offer end-to-end web development services in Pune — custom websites, e-commerce platforms, web applications, and ongoing maintenance — all built with modern technologies including{" "}
+                <a
+                  href="https://web.dev/vitals/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
+                >
+                  Core Web Vitals
+                </a>
+                {" "}best practices baked in from day one.
+              </p>
+              <p>
+                We don't just build software or run ads. We understand the business problem first, then build the right digital solution around it.
+              </p>
             </div>
           </div>
         </AnimatedSection>
@@ -114,6 +128,18 @@ export const SolutionSection = () => {
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Internal link to full services page */}
+        <AnimatedSection delay={0.4}>
+          <div className="text-center mt-16">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 text-primary font-semibold text-lg hover:underline underline-offset-4 transition-all"
+            >
+              Explore all our services in detail →
+            </Link>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

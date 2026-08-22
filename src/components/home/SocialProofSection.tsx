@@ -54,11 +54,13 @@ export const SocialProofSection = () => {
 
         <AnimatedSection>
           <div className="text-center mb-16">
+            {/* H2 for Testimonials section */}
             <h2 className="heading-lg text-foreground mb-4">
-              Don't just take our word for it.
+              What Our Clients Say —{" "}
+              <span className="italic text-primary">Testimonials.</span>
             </h2>
-            <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto">
-              Real feedback from real clients.
+            <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto leading-relaxed">
+              Real feedback from real clients — businesses across Pune and Maharashtra who trusted us to build their digital presence.
             </p>
           </div>
 

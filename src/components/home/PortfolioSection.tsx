@@ -1,4 +1,5 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { Link } from "react-router-dom";
 import { ArrowRight, Globe, Code2 } from "lucide-react";
 
 const caseStudies = [
@@ -23,11 +24,19 @@ export const PortfolioSection = () => {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <div className="text-center mb-16">
+            {/* H2 for Portfolio section */}
             <h2 className="heading-lg text-foreground mb-4">
-              See what we've built.
+              Our Portfolio — Web Projects Built{" "}
+              <span className="italic text-primary">for Real Businesses.</span>
             </h2>
-            <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto">
-              Real projects. Real businesses. Real results.
+            <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto leading-relaxed">
+              Every project we ship solves a real problem for a real business. Here's a look at what we've built — and what we focused on to deliver results.{" "}
+              <Link
+                to="/about"
+                className="text-primary font-semibold underline underline-offset-4 hover:text-primary/80 transition-colors"
+              >
+                Learn more about our team →
+              </Link>
             </p>
           </div>
         </AnimatedSection>
@@ -129,8 +138,14 @@ export const PortfolioSection = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">More projects coming soon.</h3>
               <p className="text-muted-foreground font-medium mb-6">
-                Each project we take on becomes a new case study in building better digital systems.
+                Each project we take on becomes a new case study in building better digital systems for Pune businesses.
               </p>
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline underline-offset-4 transition-colors"
+              >
+                About our team <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </AnimatedSection>
         </div>

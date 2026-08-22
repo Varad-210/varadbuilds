@@ -34,13 +34,18 @@ export const HeroSection = () => {
                 DIGITAL SYSTEMS FOR GROWING BUSINESSES
               </p>
               
+              {/* H1 with primary keyword */}
               <h1 className="heading-xl text-foreground mb-4">
-                Build a Digital System That<br />
-                <span className="italic text-primary">Helps Your Business Grow.</span>
+                Top Web Development<br />
+                <span className="italic text-primary">Company in Pune.</span>
               </h1>
               
-              <p className="body-lg text-muted-foreground mb-8 max-w-2xl text-lg md:text-xl font-medium leading-relaxed">
-                From high-converting websites to custom business software and Meta Ads, VaradBuilds helps you attract customers, simplify operations, and build a stronger digital foundation.
+              {/* SEO body copy — geo-targeted intro */}
+              <p className="body-lg text-muted-foreground mb-2 max-w-2xl text-lg md:text-xl font-medium leading-relaxed">
+                VaradBuilds is a Pune-based digital agency helping businesses across Maharashtra build high-converting websites, automate operations with custom software, and attract qualified leads through Meta Ads.
+              </p>
+              <p className="text-base text-muted-foreground mb-6 max-w-2xl font-medium leading-relaxed">
+                Whether you run a café in Koregaon Park, a clinic in Kothrud, a salon in Baner, or a startup in Hinjewadi — we understand the Pune market and build digital systems that fit the way your business actually works.
               </p>
 
               <div className="flex flex-col gap-3">
@@ -49,7 +54,7 @@ export const HeroSection = () => {
                     to="/book-demo"
                     className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-[0_8px_30px_rgb(59,130,246,0.3)] hover:shadow-[0_8px_35px_rgb(59,130,246,0.4)] hover:-translate-y-1"
                   >
-                    Book a Strategy Call
+                    Book a Free Strategy Call
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                   
@@ -60,9 +65,18 @@ export const HeroSection = () => {
                     View Our Services
                   </Link>
                 </div>
-                <p className="text-sm text-muted-foreground font-medium pl-2">
-                  Tell us what you're trying to improve. We'll help you figure out the right solution.
-                </p>
+
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-1 pl-1">
+                  <p className="text-sm text-muted-foreground font-medium">
+                    Tell us what you're trying to improve. We'll help you figure out the right solution.
+                  </p>
+                  <Link
+                    to="/about"
+                    className="text-sm text-primary font-semibold hover:underline underline-offset-4 whitespace-nowrap"
+                  >
+                    About us →
+                  </Link>
+                </div>
               </div>
             </motion.div>
           </div>
