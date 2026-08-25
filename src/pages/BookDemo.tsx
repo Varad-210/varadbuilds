@@ -495,7 +495,7 @@ export const BookDemo = () => {
             /* SUCCESS SCREEN */
             <AnimatedSection>
 
-              <div className="max-w-2xl mx-auto glass-card p-12 rounded-3xl text-center bg-white border border-primary/20 shadow-2xl">
+              <div className="max-w-2xl mx-auto glass-card p-12 rounded-2xl text-center bg-white border border-primary/20 shadow-2xl">
 
                 <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
 

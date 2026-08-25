@@ -67,7 +67,7 @@ export const Navbar = () => {
             ))}
             <Link
               to="/book-demo"
-              className="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all shadow-[0_4px_14px_0_rgb(59,130,246,0.39)] hover:shadow-[0_6px_20px_rgba(59,130,246,0.23)] hover:-translate-y-0.5"
+              className="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all shadow-[0_4px_14px_0_rgb(59,130,246,0.39)] hover:shadow-[0_6px_20px_rgba(59,130,246,0.23)] hover:-translate-y-0.5"
             >
               Book a Strategy Call
             </Link>
@@ -118,7 +118,7 @@ export const Navbar = () => {
               <Link
                 to="/book-demo"
                 onClick={() => setMobileOpen(false)}
-                className="inline-flex items-center justify-center px-6 py-3 mt-4 text-base font-bold bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all"
+                className="inline-flex items-center justify-center px-6 py-3 mt-4 text-base font-bold bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all"
               >
                 Book a Strategy Call
               </Link>

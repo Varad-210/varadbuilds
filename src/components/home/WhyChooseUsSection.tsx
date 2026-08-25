@@ -62,9 +62,19 @@ export const WhyChooseUsSection = () => {
           </div>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-8">
           {reasons.map((reason, index) => (
-            <AnimatedSection key={index} delay={index * 0.1}>
+            <AnimatedSection 
+              key={index} 
+              delay={index * 0.1}
+              className={
+                index < 3 
+                  ? "md:col-span-1 lg:col-span-2" 
+                  : index === 3 
+                  ? "md:col-span-1 lg:col-span-3" 
+                  : "md:col-span-2 lg:col-span-3 lg:col-start-4"
+              }
+            >
               <div className="glass-card p-8 rounded-xl bg-white border border-primary/10 hover:shadow-lg transition-all duration-300 h-full">
                 <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6">
                   {reason.icon}

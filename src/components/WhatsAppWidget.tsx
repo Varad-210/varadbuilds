@@ -38,7 +38,7 @@ export const WhatsAppWidget = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <div className="bg-white p-3 rounded-lg shadow-lg border border-border/50 max-w-[200px]">
+            <div className="bg-white p-3 rounded-xl shadow-lg border border-border/50 max-w-[200px]">
               <p className="text-sm text-foreground font-medium">Need help choosing the right solution? Talk to us →</p>
             </div>
           </motion.div>

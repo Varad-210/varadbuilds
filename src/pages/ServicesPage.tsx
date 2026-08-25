@@ -498,7 +498,7 @@ export const ServicesPage = () => {
               <AnimatedSection key={idx} delay={idx * 0.08}>
                 <div className="glass-card bg-muted/20 p-8 rounded-2xl border border-primary/10 hover:border-primary/30 hover:shadow-md transition-all duration-300 h-full">
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">{r.icon}</div>
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">{r.icon}</div>
                     <span className="text-3xl font-black text-primary/20 font-heading">{r.num}</span>
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-3">{r.title}</h3>

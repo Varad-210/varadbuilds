@@ -30,8 +30,8 @@ export const HeroSection = () => {
               transition={{ duration: 1, delay: 0.4 }}
               className="flex flex-col space-y-2"
             >
-              <p className="text-sm tracking-[0.3em] uppercase text-primary font-semibold mb-6 font-body">
-                DIGITAL SYSTEMS FOR GROWING BUSINESSES
+              <p className="text-sm tracking-[0.3em] text-primary font-semibold mb-6 font-body">
+                Digital systems for growing businesses
               </p>
               
               {/* H1 with primary keyword — trustworthy, benefit-first */}
@@ -62,13 +62,13 @@ export const HeroSection = () => {
                   </Link>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-1 pl-1">
-                  <p className="text-sm text-muted-foreground font-medium">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-3 pl-1">
+                  <p className="text-base text-muted-foreground font-medium">
                     Tell us what you're trying to improve. We'll help you figure out the right solution.
                   </p>
                   <Link
                     to="/about"
-                    className="text-sm text-primary font-semibold hover:underline underline-offset-4 whitespace-nowrap"
+                    className="text-base text-primary font-bold hover:underline underline-offset-4 whitespace-nowrap flex items-center"
                   >
                     About us →
                   </Link>

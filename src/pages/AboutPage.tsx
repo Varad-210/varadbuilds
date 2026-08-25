@@ -148,7 +148,7 @@ export const AboutPage = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             <AnimatedSection>
-              <div className="bg-white p-10 rounded-3xl border border-primary/10 h-full shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-white p-10 rounded-2xl border border-primary/10 h-full shadow-md hover:shadow-lg transition-shadow">
                 <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                   <Target className="w-7 h-7 text-primary" />
                 </div>
@@ -178,7 +178,7 @@ export const AboutPage = () => {
             </AnimatedSection>
             
             <AnimatedSection delay={0.2}>
-              <div className="bg-white p-10 rounded-3xl border border-primary/10 h-full shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-white p-10 rounded-2xl border border-primary/10 h-full shadow-md hover:shadow-lg transition-shadow">
                 <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                   <Lightbulb className="w-7 h-7 text-primary" />
                 </div>
@@ -356,7 +356,7 @@ export const AboutPage = () => {
             </AnimatedSection>
             
             <AnimatedSection delay={0.2}>
-              <div className="bg-primary-foreground/10 p-8 rounded-3xl border border-white/20 backdrop-blur-md">
+              <div className="bg-primary-foreground/10 p-8 rounded-2xl border border-white/20 backdrop-blur-md">
                 <ul className="space-y-6">
                   {["Clear communication.", "Practical recommendations.", "Transparent scope.", "Business-focused solutions.", "Long-term thinking."].map((item, idx) => (
                     <li key={idx} className="flex items-center gap-4">
@@ -422,7 +422,7 @@ export const AboutPage = () => {
 
       {/* 13. FINAL CTA */}
       <section className="section-padding py-24 bg-section-soft">
-        <div className="max-w-4xl mx-auto text-center bg-white p-12 rounded-3xl shadow-xl border border-primary/10">
+        <div className="max-w-4xl mx-auto text-center bg-white p-12 rounded-2xl shadow-xl border border-primary/10">
           <AnimatedSection>
             <h2 className="heading-lg text-foreground mb-6">Let's Talk About What Your Business Needs.</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

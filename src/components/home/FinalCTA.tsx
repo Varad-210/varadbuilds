@@ -30,7 +30,7 @@ export const FinalCTA = () => {
               href="https://wa.me/919049671938?text=Hi%20Varad,%20I'm%20interested%20in%20discussing%20a%20digital%20growth%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-12 py-4 text-lg font-bold border-2 border-white text-white rounded-xl hover:bg-white/10 transition-all duration-300"
+              className="inline-flex items-center justify-center px-10 py-4 text-lg font-medium text-white/90 rounded-xl hover:bg-white/10 transition-all duration-300"
             >
               <MessageCircle className="mr-2 w-5 h-5" />
               WhatsApp Us
@@ -38,7 +38,7 @@ export const FinalCTA = () => {
 
             <Link
               to="/pricing"
-              className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold border-2 border-white/60 text-white/90 rounded-xl hover:bg-white/10 hover:border-white transition-all duration-300"
+              className="inline-flex items-center justify-center px-10 py-4 text-lg font-medium text-white/90 rounded-xl hover:bg-white/10 transition-all duration-300"
             >
               <IndianRupee className="mr-2 w-5 h-5" />
               View Pricing

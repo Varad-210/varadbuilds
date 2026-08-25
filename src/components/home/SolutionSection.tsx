@@ -120,7 +120,7 @@ export const SolutionSection = () => {
 
                 <Link
                   to={solution.ctaLink}
-                  className="w-full py-4 rounded-xl font-bold text-center bg-foreground text-background hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-md"
+                  className="w-full py-4 rounded-xl font-bold text-center bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-[0_8px_30px_rgb(59,130,246,0.3)] hover:-translate-y-1"
                 >
                   {solution.ctaText}
                 </Link>

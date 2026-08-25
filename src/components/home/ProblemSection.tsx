@@ -17,12 +17,12 @@ export const ProblemSection = () => {
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>
-          <div className="glass-card p-10 md:p-14 border-primary/10 shadow-lg text-center space-y-6">
+          <div className="glass-card p-10 md:p-14 border-primary/10 shadow-lg text-left space-y-6">
             <p className="text-xl text-muted-foreground">You may already have a website.</p>
             <p className="text-xl text-muted-foreground">You may already run ads.</p>
             <p className="text-xl text-muted-foreground">You may already use spreadsheets, forms, WhatsApp, CRMs, or other software.</p>
             
-            <div className="w-16 h-px bg-border mx-auto my-8"></div>
+            <div className="w-16 h-px bg-border my-8"></div>
 
             <p className="text-2xl font-bold text-foreground">
               But if these systems don't work together, growth becomes harder than it needs to be.

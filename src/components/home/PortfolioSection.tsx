@@ -44,7 +44,7 @@ export const PortfolioSection = () => {
         <div className="space-y-16">
           {caseStudies.map((cs, index) => (
             <AnimatedSection key={index} delay={0.1}>
-              <div className="glass-card rounded-3xl border border-primary/10 overflow-hidden shadow-xl bg-white">
+              <div className="glass-card rounded-2xl border border-primary/10 overflow-hidden shadow-xl bg-white">
 
                 {/* Screenshots side by side */}
                 <div className="grid md:grid-cols-2 gap-0 border-b border-border/50">
@@ -132,7 +132,7 @@ export const PortfolioSection = () => {
 
           {/* More projects coming soon card */}
           <AnimatedSection delay={0.2}>
-            <div className="glass-card rounded-3xl border-2 border-dashed border-primary/20 p-12 text-center bg-white/50">
+            <div className="glass-card rounded-2xl border-2 border-dashed border-primary/20 p-12 text-center bg-white/50">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <Code2 className="w-8 h-8 text-primary" />
               </div>
