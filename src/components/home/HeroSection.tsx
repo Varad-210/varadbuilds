@@ -19,9 +19,11 @@ export const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm tracking-wide mb-6 border border-primary/20">
-                Websites · Software · Meta Ads
-              </span>
+              
+<span className="mb-6 inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-semibold tracking-wide text-primary">
+  Digital systems for growing businesses
+</span>
+
             </motion.div>
 
             <motion.div
@@ -30,14 +32,12 @@ export const HeroSection = () => {
               transition={{ duration: 1, delay: 0.4 }}
               className="flex flex-col space-y-2"
             >
-              <p className="text-sm tracking-[0.3em] text-primary font-semibold mb-6 font-body">
-                Digital systems for growing businesses
-              </p>
+              
               
               {/* H1 with primary keyword — trustworthy, benefit-first */}
               <h1 className="heading-xl text-foreground mb-4">
                 Web Development &amp; Digital Solutions<br />
-                <span className="italic text-primary">for Growing Businesses in Pune.</span>
+                <span className="italic text-primary">for Growing Businesses.</span>
               </h1>
               
               {/* SEO body copy — geo-targeted intro */}

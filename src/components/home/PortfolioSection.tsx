@@ -2,20 +2,63 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { ArrowRight, Globe, Code2 } from "lucide-react";
 
-const caseStudies = [
+interface Screenshot {
+  src: string;
+  alt: string;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+interface CaseStudy {
+  tag: string;
+  industry: string;
+  client: string;
+  challenge: string;
+  built: string;
+  objective: string;
+  tech: string[];
+  screenshots: Screenshot[];
+}
+
+const caseStudies: CaseStudy[] = [
   {
     tag: "Web Development",
-    tagIcon: <Globe className="w-3 h-3" />,
     industry: "Jewellery / E-commerce",
     client: "Ambilwade Premium Jewellery",
-    screenshot2: "https://res.cloudinary.com/dclr2ihxn/image/upload/v1787113719/ChatGPT_Image_Aug_19_2026_09_58_19_AM_o2krco.png",
-    screenshot1: "https://res.cloudinary.com/dclr2ihxn/image/upload/v1787113446/ChatGPT_Image_Aug_19_2026_09_53_11_AM_guwy0s.png",
+    screenshots: [
+      {
+        src: "https://res.cloudinary.com/dclr2ihxn/image/upload/v1787113446/ChatGPT_Image_Aug_19_2026_09_53_11_AM_guwy0s.png",
+        alt: "Ambilwade Premium Jewellery screenshot 1",
+        className: "",
+      },
+      {
+        src: "https://res.cloudinary.com/dclr2ihxn/image/upload/v1787113719/ChatGPT_Image_Aug_19_2026_09_58_19_AM_o2krco.png",
+        alt: "Ambilwade Premium Jewellery screenshot 2",
+        className: "",
+      },
+    ],
     challenge: "Create a premium digital shopping experience that builds trust and makes it easy for customers to discover jewellery, manage purchases, and book store appointments.",
     built: "A modern jewellery e-commerce platform featuring product discovery, wishlist, cart, customer accounts, order tracking, appointments, saved addresses, and custom jewellery experiences.",
     objective: "Create a seamless online-to-store customer journey while presenting the jewellery brand with a premium digital identity.",
-    tech: ["React", "Node.js", "Express", "MongoDB"]
+    tech: ["React", "Node.js", "Express", "MongoDB"],
   },
-  // Add more case studies here
+  {
+    tag: "Software Development",
+    industry: "Retail / SaaS",
+    client: "SmartPOS Retail Management System",
+    screenshots: [
+      {
+        src: "https://res.cloudinary.com/dclr2ihxn/image/upload/v1791698523/SmartPOS_Retail_Dashboard_Showcase_obkn6l.png",
+        alt: "SmartPOS Retail Dashboard Showcase",
+        className: "",
+        style: { objectPosition: "center -20px" },
+      },
+    ],
+    challenge: "Simplify daily billing, inventory updates, and supplier coordination for small retail stores.",
+    built: "A full-stack POS platform with product management, live stock tracking, purchase orders, sales reports, and WhatsApp supplier workflows.",
+    objective: "Reduce manual work and help shop owners manage operations through one clear, reliable dashboard.",
+    tech: ["React", "Node.js", "MongoDB", "WhatsApp API"],
+  },
 ];
 
 export const PortfolioSection = () => {
@@ -45,43 +88,60 @@ export const PortfolioSection = () => {
           {caseStudies.map((cs, index) => (
             <AnimatedSection key={index} delay={0.1}>
               <div className="glass-card rounded-2xl border border-primary/10 overflow-hidden shadow-xl bg-white">
-
-                {/* Screenshots side by side */}
-                <div className="grid md:grid-cols-2 gap-0 border-b border-border/50">
-                  <div className="overflow-hidden bg-muted/20 border-r border-border/30">
-                    <img
-                      src={cs.screenshot1}
-                      alt={`${cs.client} screenshot 1`}
-                      className="w-full h-[280px] object-cover object-top"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement!.innerHTML = `<div class="w-full h-[280px] flex items-center justify-center bg-muted/30 text-muted-foreground text-sm font-medium p-4 text-center">Save screenshot as<br/>public/proof1.png</div>`;
-                      }}
-                    />
-                    {/* Service tag */}
-                    <div className="absolute top-4 left-4">
-                      <span className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-wider py-1.5 px-3 rounded-full shadow-lg">
-                        {tagIcon(cs.tag)}
-                        {cs.tag}
-                      </span>
-                    </div>
+                {/* Project screenshots */}
+                <div className="relative overflow-hidden bg-slate-950">
+                  <div className="absolute left-4 top-4 z-10 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-primary px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-primary-foreground shadow-lg">
+                    {tagIcon(cs.tag)}
+                    {cs.tag}
                   </div>
-                  <div className="overflow-hidden bg-muted/20 relative">
-                    <img
-                      src={cs.screenshot2}
-                      alt={`${cs.client} screenshot 2`}
-                      className="w-full h-[280px] object-cover object-top"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement!.innerHTML = `<div class="w-full h-[280px] flex items-center justify-center bg-muted/30 text-muted-foreground text-sm font-medium p-4 text-center">Save screenshot as<br/>public/proof2.png</div>`;
-                      }}
-                    />
+
+                  <div
+                    className={`grid grid-cols-1 gap-1 bg-slate-900 p-1 ${
+                      cs.screenshots.length > 1 ? "md:grid-cols-2" : ""
+                    }`}
+                  >
+                    {cs.screenshots.map((image, imgIdx) => (
+                      <div
+                        key={imgIdx}
+                        className={`group relative overflow-hidden bg-slate-800 ${image.className || ""}`}
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          loading="lazy"
+                          style={image.style}
+                          className={`w-full object-cover ${
+                            image.style?.objectPosition ? "" : "object-top"
+                          } transition-transform duration-500 group-hover:scale-[1.02] ${
+                            cs.screenshots.length === 1
+                              ? "h-64 sm:h-80 lg:h-[400px]"
+                              : image.className?.includes("col-span-2")
+                              ? "h-56 sm:h-64 lg:h-[340px]"
+                              : "h-56 sm:h-64 lg:h-[280px]"
+                          }`}
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                            const placeholder = e.currentTarget.nextElementSibling as HTMLElement;
+                            if (placeholder) {
+                              placeholder.style.display = "flex";
+                            }
+                          }}
+                        />
+                        <div className="hidden h-56 sm:h-64 lg:h-[280px] w-full flex-col items-center justify-center bg-slate-900/80 border border-slate-700/50 p-6 text-center text-slate-300">
+                          <Code2 className="w-8 h-8 text-primary mb-2 opacity-80" />
+                          <span className="text-xs font-semibold uppercase tracking-wider text-primary">
+                            Preview
+                          </span>
+                          <span className="text-sm font-medium mt-1">{image.alt}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
                 {/* Case study details */}
                 <div className="p-8 md:p-10">
-                  <div className="flex flex-wrap items-start justify-between gap-4 mb-8">
+                  <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-start mb-8">
                     <div>
                       <p className="text-sm font-bold text-primary uppercase tracking-wider mb-1">
                         Industry: {cs.industry}
@@ -90,9 +150,12 @@ export const PortfolioSection = () => {
                         {cs.client}
                       </h3>
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 lg:max-w-[440px] lg:justify-end">
                       {cs.tech.map((t, i) => (
-                        <span key={i} className="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full border border-primary/20">
+                        <span
+                          key={i}
+                          className="px-3.5 py-1.5 bg-primary/10 text-primary text-xs sm:text-sm font-bold rounded-full border border-primary/20"
+                        >
                           {t}
                         </span>
                       ))}

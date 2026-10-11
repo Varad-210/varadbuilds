@@ -18,7 +18,7 @@ export const Footer = () => {
               <b> DIGITAL SYSTEMS FOR GROWING BUSINESSES </b>
             </p>
             <p className="text-base text-muted-foreground mb-6 max-w-2xl font-medium leading-relaxed">
-                Whether you run a café in Koregaon Park, a clinic in Kothrud, a salon in Baner, or a startup in Hinjewadi — we understand the Pune market and build digital systems that fit the way your business actually works.
+                Whether you run a cafe in Koregaon Park, a clinic in Kothrud, a salon in Baner, or a startup in Hinjewadi — we understand the Pune market and build digital systems that fit the way your business actually works.
               </p>
           </div>
 

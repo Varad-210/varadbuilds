@@ -197,7 +197,7 @@ export const ServicesPage = () => {
                   {/* Screenshot placeholder */}
                   <div className="rounded-2xl overflow-hidden border border-border/50 shadow-lg bg-muted/20 h-64 flex items-center justify-center relative">
                     <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent" />
-                    <img src="https://res.cloudinary.com/dclr2ihxn/image/upload/v1787112532/ChatGPT_Image_Aug_19_2026_09_37_06_AM_pcq7qi.png" alt="" />
+                    <img src="https://res.cloudinary.com/dclr2ihxn/image/upload/v1787113719/ChatGPT_Image_Aug_19_2026_09_58_19_AM_o2krco.png" alt="" />
                   </div>
                 </div>
               </AnimatedSection>
@@ -213,10 +213,18 @@ export const ServicesPage = () => {
               <AnimatedSection delay={0.2}>
                 <div className="space-y-6 order-2 lg:order-1">
                   {/* Screenshot placeholder */}
-                  <div className="rounded-2xl overflow-hidden border border-border/50 shadow-lg bg-muted/20 h-64 flex items-center justify-center relative">
-                    <div className="absolute inset-0 bg-gradient-to-bl from-primary/10 to-transparent" />
-                    <p className="text-muted-foreground text-sm font-bold tracking-widest relative z-10">[ADD REAL SOFTWARE SCREENSHOT]</p>
+                  
+                  <div className="rounded-2xl overflow-hidden border border-border shadow-lg bg-muted/20 relative">
+                    <div className="absolute inset-0 bg-gradient-to-bl from-primary/10 to-transparent pointer-events-none" />
+
+                    <img
+                      src="https://res.cloudinary.com/dclr2ihxn/image/upload/v1791697217/SmartPOS_Software_Case_Study_rewfhl.png"
+                      alt="SmartPOS Software Case Study"
+                      className="block w-full h-auto object-contain"
+                    />
                   </div>
+
+                  
 
                   {/* Features */}
                   <div className="bg-muted/20 rounded-2xl p-8 border border-primary/10">

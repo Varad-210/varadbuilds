@@ -448,7 +448,7 @@ export const AboutPage = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <a
-                href="https://wa.me/919421528659" 
+                href="https://wa.me/919049671938?text=Hi%20Varad,%20I'm%20interested%20in%20discussing%20a%20digital%20growth%20project." 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-10 py-5 text-lg font-bold bg-green-500 text-white rounded-xl hover:bg-green-600 transition-all duration-300 shadow-[0_8px_30px_rgb(34,197,94,0.3)] hover:-translate-y-1 w-full sm:w-auto"
