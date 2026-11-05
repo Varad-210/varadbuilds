@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "pricing": "Pricing",
+    "about": "About",
+    "cta": "Book a Strategy Call",
+    "toggleMenu": "Toggle menu",
+    "switchLanguage": "Change language",
+    "logoAlt": "VaradBuilds Logo"
+  },
+  "home": {
+    "hero": {
+      "badge": "Digital systems for growing businesses",
+      "titleLead": "Web Development & Digital Solutions",
+      "titleEmph": "for Growing Businesses.",
+      "intro": "VaradBuilds is a Pune-based digital agency helping businesses across Maharashtra build high-converting websites, automate operations with custom software, and attract qualified leads through Meta Ads.",
+      "ctaPrimary": "Book a Free Strategy Call",
+      "ctaSecondary": "View Our Services",
+      "helper": "Tell us what you're trying to improve. We'll help you figure out the right solution.",
+      "aboutLink": "About us →"
+    },
+    "trust": {
+      "title": "Built around your business goals — not generic packages.",
+      "benefits": [
+        "Business-first strategy",
+        "Custom solutions",
+        "Conversion-focused execution",
+        "Clear communication"
+      ]
+    },
+    "problem": {
+      "titleLead": "Your business may not need more tools.",
+      "titleEmph": "It may need a better system.",
+      "lines": [
+        "You may already have a website.",
+        "You may already run ads.",
+        "You may already use spreadsheets, forms, WhatsApp, CRMs, or other software."
+      ],
+      "pivot": "But if these systems don't work together, growth becomes harder than it needs to be.",
+      "bullets": [
+        "Leads get missed.",
+        "Follow-ups get delayed.",
+        "Teams repeat manual work.",
+        "Customers lose trust when your online presence feels outdated.",
+        "And you keep spending time fixing problems that technology should have solved already."
+      ],
+      "closing": "That's where VaradBuilds comes in."
+    },
+    "solution": {
+      "titleLead": "Our Web Development & Digital",
+      "titleEmph": "Services in Pune.",
+      "introStart": "We offer end-to-end web development services in Pune — custom websites, e-commerce platforms, web applications, and ongoing maintenance — all built with modern technologies including",
+      "introLink": "Core Web Vitals",
+      "introEnd": "best practices baked in from day one.",
+      "intro2": "We don't just build software or run ads. We understand the business problem first, then build the right digital solution around it.",
+      "exploreLink": "Explore all our services in detail →",
+      "items": [
+        {
+          "tag": "Web Development",
+          "headline": "Turn Your Website Into Your Best Sales Asset.",
+          "copy": "From informational business sites to full e-commerce stores and web applications, we design and build websites that load fast, look great on mobile, and guide visitors toward taking action — whether that's calling you, filling a form, or placing an order.",
+          "benefits": [
+            "Stronger online credibility",
+            "Clearer customer journey",
+            "Lead capture",
+            "Mobile-first experience",
+            "SEO-ready structure",
+            "WhatsApp/contact integration",
+            "Analytics setup"
+          ],
+          "cta": "Plan My Website"
+        },
+        {
+          "tag": "Custom Software Development",
+          "headline": "Replace Manual Work With Software Built for Your Business.",
+          "copy": "If your team is stuck with spreadsheets, repetitive data entry, disconnected tools, or manual processes, we build custom web applications around the way your business actually works. From CRMs to client portals, we replace friction with automation.",
+          "benefits": [
+            "Custom CRM and lead systems",
+            "Internal dashboards",
+            "Client portals",
+            "Workflow automation",
+            "API integrations",
+            "Automated reporting",
+            "Scalable database architecture"
+          ],
+          "cta": "Discuss My Software Idea"
+        },
+        {
+          "tag": "Meta Ads",
+          "headline": "Turn Meta Ads Into a Lead Generation System.",
+          "copy": "Reach the right audience with Facebook and Instagram campaigns built around your offer, creative, landing page, tracking, and conversion journey. We handle strategy through to reporting so you can focus on closing leads.",
+          "benefits": [
+            "Audience research",
+            "Campaign strategy",
+            "Ad copy and creative",
+            "Conversion tracking",
+            "Retargeting",
+            "A/B testing",
+            "Performance optimization",
+            "Reporting"
+          ],
+          "cta": "Plan My Ad Campaign"
+        }
+      ]
+    },
+    "serviceSelection": {
+      "titleLead": "Not sure what you need?",
+      "titleEmph": "Start with the problem.",
+      "items": [
+        {
+          "quote": "My business doesn't look professional online.",
+          "solution": "You probably need Web Development."
+        },
+        {
+          "quote": "We're wasting time on repetitive manual work.",
+          "solution": "You probably need Custom Software."
+        },
+        {
+          "quote": "We need a consistent way to generate leads.",
+          "solution": "You probably need Meta Ads."
+        },
+        {
+          "quote": "We need all three.",
+          "solution": "Let's build a complete digital growth system."
+        }
+      ],
+      "cta": "Help Me Choose"
+    },
+    "outcome": {
+      "titleLead": "What changes when your digital systems",
+      "titleEmph": "work together?",
+      "items": [
+        {
+          "title": "Attract",
+          "desc": "Give potential customers a professional place to discover and trust your business."
+        },
+        {
+          "title": "Capture",
+          "desc": "Turn website visitors and ad traffic into inquiries and leads."
+        },
+        {
+          "title": "Automate",
+          "desc": "Reduce repetitive tasks and organize your business workflows."
+        },
+        {
+          "title": "Grow",
+          "desc": "Build systems that can improve as your business grows."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Your next digital upgrade starts with one conversation.",
+      "copy": "Whether you're a business owner in Pune looking for a website that converts, software that removes manual work, or Meta Ads that bring qualified prospects — let's start by understanding what you're trying to achieve.",
+      "ctaPrimary": "Book a Strategy Call",
+      "ctaWhatsapp": "WhatsApp Us",
+      "ctaPricing": "View Pricing",
+      "note": "No complicated jargon. No pressure. Just a conversation about your business."
+    }
+  }
+}

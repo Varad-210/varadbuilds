@@ -1,6 +1,11 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { useTranslation } from "react-i18next";
 
 export const ProblemSection = () => {
+  const { t } = useTranslation();
+  const lines = t("home.problem.lines", { returnObjects: true }) as string[];
+  const bullets = t("home.problem.bullets", { returnObjects: true }) as string[];
+
   return (
     <section className="section-padding bg-gradient-to-b from-white to-blue-50/30 py-24 relative overflow-hidden">
       {/* Soft background glow */}
@@ -10,30 +15,28 @@ export const ProblemSection = () => {
         <AnimatedSection>
           <div className="text-center mb-16">
             <h2 className="heading-lg text-foreground mb-6">
-              Your business may not need more tools.<br />
-              <span className="italic text-primary">It may need a better system.</span>
+              {t("home.problem.titleLead")}<br />
+              <span className="italic text-primary">{t("home.problem.titleEmph")}</span>
             </h2>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>
           <div className="glass-card p-10 md:p-14 border-primary/10 shadow-lg text-left space-y-6">
-            <p className="text-xl text-muted-foreground">You may already have a website.</p>
-            <p className="text-xl text-muted-foreground">You may already run ads.</p>
-            <p className="text-xl text-muted-foreground">You may already use spreadsheets, forms, WhatsApp, CRMs, or other software.</p>
+            {lines.map((line, idx) => (
+              <p key={idx} className="text-xl text-muted-foreground">{line}</p>
+            ))}
             
             <div className="w-16 h-px bg-border my-8"></div>
 
             <p className="text-2xl font-bold text-foreground">
-              But if these systems don't work together, growth becomes harder than it needs to be.
+              {t("home.problem.pivot")}
             </p>
 
             <ul className="text-lg text-muted-foreground space-y-3 mt-8 font-medium">
-              <li>Leads get missed.</li>
-              <li>Follow-ups get delayed.</li>
-              <li>Teams repeat manual work.</li>
-              <li>Customers lose trust when your online presence feels outdated.</li>
-              <li>And you keep spending time fixing problems that technology should have solved already.</li>
+              {bullets.map((bullet, idx) => (
+                <li key={idx}>{bullet}</li>
+              ))}
             </ul>
           </div>
         </AnimatedSection>
@@ -41,7 +44,7 @@ export const ProblemSection = () => {
         <AnimatedSection delay={0.4}>
           <div className="mt-16 text-center">
             <p className="text-3xl font-heading font-bold text-primary underline decoration-primary/20 underline-offset-8">
-              That's where VaradBuilds comes in.
+              {t("home.problem.closing")}
             </p>
           </div>
         </AnimatedSection>

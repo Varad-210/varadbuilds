@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Mukta:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,10 +6,10 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%; /* pure soft white/gray */
+    --background: 210 33% 98%;
     --foreground: 222 47% 11%;
-    --section-bg: 206 50% 94%; /* Soft icy blue from user image */
-    --section-dark: 238 47% 42%; /* Dark indigo/purple from user screenshot */
+    --section-bg: 214 45% 96%;
+    --section-dark: 222 55% 18%;
 
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
@@ -17,16 +17,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 215 100% 50%;
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 255 100% 50%;
+    --secondary: 222 55% 18%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 165 100% 45%;
+    --accent: 162 72% 40%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,7 +34,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 195 100% 50%;
+    --ring: 221 83% 60%;
 
     --radius: 0.5rem;
 
@@ -48,12 +48,19 @@
 
     --sidebar-background: 210 40% 98%;
     --sidebar-foreground: 222 47% 11%;
-    --sidebar-primary: 215 100% 50%;
+    --sidebar-primary: 221 83% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 165 100% 45%;
+    --sidebar-accent: 162 72% 40%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 214.3 31.8% 91.4%;
-    --sidebar-ring: 195 100% 50%;
+    --sidebar-ring: 221 83% 60%;
+  }
+
+  /* Outfit and Plus Jakarta Sans carry no Devanagari glyphs. */
+  html[lang="mr"],
+  html[lang="hi"] {
+    --font-heading: 'Mukta', 'Outfit', sans-serif;
+    --font-body: 'Mukta', 'Plus Jakarta Sans', system-ui, sans-serif;
   }
 }
 
@@ -64,6 +71,7 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body {
@@ -71,10 +79,13 @@
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-width: 320px;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+    text-wrap: balance;
   }
 }
 
@@ -201,7 +212,7 @@
   }
 
   .section-padding {
-    @apply px-6 py-24 md:px-12 lg:px-24 xl:px-32;
+    @apply px-5 py-16 sm:px-6 sm:py-20 md:px-12 md:py-24 lg:px-20 xl:px-28;
   }
 
   .heading-xl {
@@ -225,5 +236,14 @@
 
   .body-md {
     @apply text-base md:text-lg leading-relaxed;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

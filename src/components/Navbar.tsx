@@ -2,15 +2,18 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const navLinks = [
-  { name: "Home", path: "/#Home" },
-  { name: "Services", path: "/services" },
-  { name: "Pricing", path: "/pricing" },
-  { name: "About", path: "/about" },
-];
+  { key: "home", path: "/#Home" },
+  { key: "services", path: "/services" },
+  { key: "pricing", path: "/pricing" },
+  { key: "about", path: "/about" },
+] as const;
 
 export const Navbar = () => {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
@@ -39,7 +42,7 @@ export const Navbar = () => {
           <Link to="/" className="flex items-center gap-3 group">
             <img 
               src="https://res.cloudinary.com/dclr2ihxn/image/upload/v1787073847/logo2_gdparh.png" 
-              alt="VaradBuilds Logo" 
+              alt={t("nav.logoAlt")} 
               className="w-10 h-10 md:w-12 md:h-12 object-contain transition-transform duration-300 group-hover:scale-110"
             />
             <span className="font-heading text-xl md:text-2xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors duration-300">
@@ -59,17 +62,18 @@ export const Navbar = () => {
                     : "text-muted-foreground hover:text-primary"
                 }`}
               >
-                {link.name}
+                {t(`nav.${link.key}`)}
                 {location.pathname === link.path && (
                   <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"></span>
                 )}
               </Link>
             ))}
+            <LanguageSwitcher />
             <Link
               to="/book-demo"
               className="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all shadow-[0_4px_14px_0_rgb(59,130,246,0.39)] hover:shadow-[0_6px_20px_rgba(59,130,246,0.23)] hover:-translate-y-0.5"
             >
-              Book a Strategy Call
+              {t("nav.cta")}
             </Link>
           </div>
 
@@ -77,7 +81,7 @@ export const Navbar = () => {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden text-foreground hover:text-primary transition-colors duration-300"
-            aria-label="Toggle menu"
+            aria-label={t("nav.toggleMenu")}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -106,7 +110,7 @@ export const Navbar = () => {
                   onClick={() => setMobileOpen(false)}
                   className="font-heading text-2xl font-semibold text-foreground hover:text-primary transition-colors"
                 >
-                  {link.name}
+                  {t(`nav.${link.key}`)}
                 </Link>
               </motion.div>
             ))}
@@ -120,8 +124,16 @@ export const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center justify-center px-6 py-3 mt-4 text-base font-bold bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all"
               >
-                Book a Strategy Call
+                {t("nav.cta")}
               </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: navLinks.length * 0.05 + 0.05 }}
+            >
+              <LanguageSwitcher />
             </motion.div>
           </motion.div>
         )}

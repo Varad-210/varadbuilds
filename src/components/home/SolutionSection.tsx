@@ -1,62 +1,21 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { Check, Globe, Code2, Target } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
+const ICONS = [Globe, Code2, Target];
+
+interface SolutionItem {
+  tag: string;
+  headline: string;
+  copy: string;
+  benefits: string[];
+  cta: string;
+}
 
 export const SolutionSection = () => {
-  const solutions = [
-    {
-      icon: <Globe className="w-10 h-10 text-primary" />,
-      tag: "Web Development",
-      headline: "Turn Your Website Into Your Best Sales Asset.",
-      copy: "From informational business sites to full e-commerce stores and web applications, we design and build websites that load fast, look great on mobile, and guide visitors toward taking action — whether that's calling you, filling a form, or placing an order.",
-      benefits: [
-        "Stronger online credibility",
-        "Clearer customer journey",
-        "Lead capture",
-        "Mobile-first experience",
-        "SEO-ready structure",
-        "WhatsApp/contact integration",
-        "Analytics setup"
-      ],
-      ctaText: "Plan My Website",
-      ctaLink: "/book-demo"
-    },
-    {
-      icon: <Code2 className="w-10 h-10 text-primary" />,
-      tag: "Custom Software Development",
-      headline: "Replace Manual Work With Software Built for Your Business.",
-      copy: "If your team is stuck with spreadsheets, repetitive data entry, disconnected tools, or manual processes, we build custom web applications around the way your business actually works. From CRMs to client portals, we replace friction with automation.",
-      benefits: [
-        "Custom CRM and lead systems",
-        "Internal dashboards",
-        "Client portals",
-        "Workflow automation",
-        "API integrations",
-        "Automated reporting",
-        "Scalable database architecture"
-      ],
-      ctaText: "Discuss My Software Idea",
-      ctaLink: "/book-demo"
-    },
-    {
-      icon: <Target className="w-10 h-10 text-primary" />,
-      tag: "Meta Ads",
-      headline: "Turn Meta Ads Into a Lead Generation System.",
-      copy: "Reach the right audience with Facebook and Instagram campaigns built around your offer, creative, landing page, tracking, and conversion journey. We handle strategy through to reporting so you can focus on closing leads.",
-      benefits: [
-        "Audience research",
-        "Campaign strategy",
-        "Ad copy and creative",
-        "Conversion tracking",
-        "Retargeting",
-        "A/B testing",
-        "Performance optimization",
-        "Reporting"
-      ],
-      ctaText: "Plan My Ad Campaign",
-      ctaLink: "/book-demo"
-    }
-  ];
+  const { t } = useTranslation();
+  const solutions = t("home.solution.items", { returnObjects: true }) as SolutionItem[];
 
   return (
     <section className="section-padding bg-white py-24 relative overflow-hidden" id="services">
@@ -67,35 +26,37 @@ export const SolutionSection = () => {
           <div className="text-center mb-20">
             {/* H2 for Services section */}
             <h2 className="heading-lg text-foreground mb-6">
-              Our Web Development &amp; Digital{" "}
-              <span className="italic text-primary">Services in Pune.</span>
+              {t("home.solution.titleLead")}{" "}
+              <span className="italic text-primary">{t("home.solution.titleEmph")}</span>
             </h2>
             <div className="body-lg text-muted-foreground max-w-3xl mx-auto font-medium space-y-3">
               <p>
-                We offer end-to-end web development services in Pune — custom websites, e-commerce platforms, web applications, and ongoing maintenance — all built with modern technologies including{" "}
+                {t("home.solution.introStart")}{" "}
                 <a
                   href="https://web.dev/vitals/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
                 >
-                  Core Web Vitals
+                  {t("home.solution.introLink")}
                 </a>
-                {" "}best practices baked in from day one.
+                {" "}{t("home.solution.introEnd")}
               </p>
               <p>
-                We don't just build software or run ads. We understand the business problem first, then build the right digital solution around it.
+                {t("home.solution.intro2")}
               </p>
             </div>
           </div>
         </AnimatedSection>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {solutions.map((solution, index) => (
+          {solutions.map((solution, index) => {
+            const Icon = ICONS[index];
+            return (
             <AnimatedSection key={index} delay={0.1 * (index + 1)}>
               <div className="glass-card p-10 hover:shadow-xl hover:border-primary/20 transition-all duration-300 h-full flex flex-col group rounded-2xl bg-white">
                 <div className="mb-8 bg-primary/5 w-20 h-20 flex items-center justify-center rounded-2xl group-hover:bg-primary/10 transition-colors">
-                  {solution.icon}
+                  <Icon className="w-10 h-10 text-primary" />
                 </div>
                 <p className="text-sm font-bold text-primary uppercase tracking-wider mb-4">
                   {solution.tag}
@@ -119,14 +80,15 @@ export const SolutionSection = () => {
                 </div>
 
                 <Link
-                  to={solution.ctaLink}
+                  to="/book-demo"
                   className="w-full py-4 rounded-xl font-bold text-center bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-[0_8px_30px_rgb(59,130,246,0.3)] hover:-translate-y-1"
                 >
-                  {solution.ctaText}
+                  {solution.cta}
                 </Link>
               </div>
             </AnimatedSection>
-          ))}
+            );
+          })}
         </div>
 
         {/* Internal link to full services page */}
@@ -136,7 +98,7 @@ export const SolutionSection = () => {
               to="/services"
               className="inline-flex items-center gap-2 text-primary font-semibold text-lg hover:underline underline-offset-4 transition-all"
             >
-              Explore all our services in detail →
+              {t("home.solution.exploreLink")}
             </Link>
           </div>
         </AnimatedSection>
