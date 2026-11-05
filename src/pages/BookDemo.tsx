@@ -54,9 +54,7 @@ export const BookDemo = () => {
 
         email: formData.email.trim() || null,
 
-        // Business Name is stored as businessType
-        // because that is what your Prisma schema expects.
-        businessType: formData.businessName.trim(),
+        businessName: formData.businessName.trim(),
 
         serviceType: formData.service.trim(),
 
